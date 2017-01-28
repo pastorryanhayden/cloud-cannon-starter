@@ -1,0 +1,181 @@
+body.post
+    background: url(http://sitesforchurch.s3.amazonaws.com/brownpaper-1.png)
+    .header
+        height: 280px
+        min-height: 280px
+        +breakpoint(medium)
+            min-height: 280px
+
+    p.breadcrumbs
+        position: absolute
+        top: 245px
+        text-align: center
+        width: 100%
+        margin-bottom: 40px
+        +breakpoint(890px)
+            top: 208px
+            right: 80px
+            text-align: right
+            max-width: 800px
+            margin-bottom: inherit
+        color: $main_dark_color
+        font-size: 20px
+        font-weight: bold
+        text-transform: uppercase
+        a
+            color: $main_dark_color
+            text-decoration: underline
+    .page-content
+        background: transparent
+        max-width: 1170px
+        margin-left: auto
+        margin-right: auto
+        min-height: 100vh
+        color: $main_dark_color
+
+    div.main-text
+        background: transparent
+        margin-top: 0
+        padding-top: 0
+        text-align: center
+        padding-bottom: 150px
+        color: $main_dark_color
+
+        p
+            color: $main_dark_color
+            text-align: justify
+
+        .fi
+            width: 80%
+            position: relative
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 50px
+            img
+                width: 100%
+                border: 4px solid $main_dark_color
+        .post-header
+            border-top: 2px solid $main_dark_color
+            border-bottom: 2px solid $main_dark_color
+            width: 80%
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 50px
+            padding-left: 20px
+            padding-top: 10px
+            padding-bottom: 10px
+            padding-right: 20px
+            text-align: left
+            h1.title
+                font-weight: bold
+                font-size: 30px
+                line-height: 30px
+                text-transform: uppercase
+                margin-bottom: 0
+                margin-left: 0
+            p
+                width: 100%
+                margin-left: 0
+                margin-bottom: 0
+                padding-left: 0
+                padding-bottom: 0
+                font-size: 18px
+                line-height: 18px
+
+
+body.post.list
+    .singlepost
+        width: 80%
+        margin-left: auto
+        margin-right: auto
+        max-width: 1100px
+        display: flex
+        flex-direction: column
+        +breakpoint(medium)
+            flex-direction: row
+        padding-bottom: 30px
+        border-bottom: 2px dashed $main_dark_color
+        margin-bottom: 30px
+        &:last-child
+            border-bottom: none
+            margin-bottom: 0
+
+        .featured_image
+            width: 80%
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 20px
+            +breakpoint(medium)
+                width: 384px
+                margin-left: 0
+                margin-right: 0
+        .title
+            h1
+                margin-bottom: 0
+                text-transform: uppercase
+                font-weight: bold
+            .author
+                border-top: 2px solid $main_dark_color
+                border-bottom: 2px solid $main_dark_color
+        .content
+            p
+                margin-bottom: 30px
+        .readbutton
+            text-align: left
+            width: 80%
+            margin-left: auto
+            margin-right: auto
+
+.latestPost
+    padding: 40px
+    border-bottom: 1px dashed $main_dark_color
+    h2
+        text-align: center
+        margin-bottom: 40px
+        font-size: 30px
+        line-height: 40px
+        font-weight: bold
+        color: #594323
+        text-transform: uppercase
+    .singlepost
+        display: flex
+        flex-direction: column
+        +breakpoint(medium)
+            flex-direction: row
+        margin-left: auto
+        margin-right: auto
+        width: 80%
+        max-width: 1200px
+        .featured_image
+            width: 80%
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 20px
+            +breakpoint(medium)
+                width: 512px
+                margin-left: 0
+                margin-right: 40px
+                flex-grow: 2
+            img
+                border: 2px solid $main_dark_color
+        .posttext
+            flex-shrink: 2
+        .title
+            h1
+                margin-bottom: 0
+                font-size: 28px
+                text-transform: uppercase
+                font-weight: bold
+            .author
+                border-top: 2px solid $main_dark_color
+                border-bottom: 2px solid $main_dark_color
+        .content
+            p
+                margin-bottom: 30px
+        .readbutton
+            text-align: right
+            // width: 80%
+            // margin-left: auto
+            // margin-right: auto
+.allposts
+    text-align: center

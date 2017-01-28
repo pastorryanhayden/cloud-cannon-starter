@@ -1,0 +1,12 @@
+<div class="photos">
+      <div class="photos-inner" id="sqr-gallery">
+      {% for img in site.data.photos[0].photos  limit: 12 %}
+        <div class="photo"><a href="#" data-featherlight="{{img.url}}"><img src="{{img.thumbnails.large.url }}" alt=""></a></div>
+      {% endfor %}
+      
+      {% comment %}{% for img in site.data.images[0].Images  limit: 4 %}
+      
+      <img data-src="{{img.url}}" data-thumb="{{img.thumbnails.large.url }}" src="{{img.url}}"> 
+      {% endfor %}{% endcomment %}
+      </div><!--/photos-inner-->
+</div><!--/photos-->

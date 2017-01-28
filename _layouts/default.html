@@ -1,0 +1,13 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  {% include head.html%}
+  <body class="{{page.body_class}}">
+  <nav id="menu">
+      {% include menu.html %}
+  </nav>
+  <main id="panel">
+          {{ content }}
+      {% include footer.html%}
+  </main>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+{% assign settings = site.data.settings %}
+<div class="footer">
+  <div class="button-links">
+    <a href="#"><img src="{{site.data.settings.mission_board_image}}" alt="Vision Baptist Missions" /></a>
+    <a href="#"><img src="{{site.data.settings.project_south_africa_image}}" alt="Project South Africa" /></a>
+  </div><!--/button-links-->
+  <div class="social-links">
+    <a href="#"> <img src="http://sitesforchurch.s3.amazonaws.com/Facebook-1.png" /></a>
+    <a href="#"> <img src="http://sitesforchurch.s3.amazonaws.com/Twitter-1.png" /> </a>
+    <a href="#"> <img src="http://sitesforchurch.s3.amazonaws.com/Instagram.png" /> </a>
+  </div><!--/social-buittons-->
+  <div class="footer-text">
+    <p>&copy;<a href="http://myonepage.site">MyOnePage.Site</a>.  All Rights Reserved.</p>
+  </div><!--/footer-text-->
+</div><!--/footer-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.12/slideout.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+    {{page.extra_script_tags | raw }}
+    <script>
+      var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'side': 'right',
+    'padding': 334,
+    'tolerance': 70
+
+  });
+  document.querySelector('.toggle-button').addEventListener('click', function() {
+  slideout.toggle();
+});
+      $(document).ready(function(){
+
+    $('.photos-inner').slick({
+  infinite: false,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 5,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+  });
+    {{page.extra_scripts | raw }}
+
+
+        });
+    </script>

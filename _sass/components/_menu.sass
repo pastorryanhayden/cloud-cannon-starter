@@ -1,0 +1,96 @@
+.slideout-menu
+    background: url("http://sitesforchurch.s3.amazonaws.com/menubackground.jpg") no-repeat top left
+    width: 334px
+
+#menu
+    width: 334px
+
+    .logo
+        padding: 0
+
+        img
+            margin: 0
+
+    .navigation
+        padding: 27px
+
+        ul.menu.vertical
+            border-top: 1px solid #2F2213
+
+            li
+                line-height: 46px
+                border-bottom: 1px solid #2F2213
+                padding-top: 3px
+                padding-bottom: 3px
+
+                &:hover
+                    background: url("http://sitesforchurch.s3.amazonaws.com/menu_shadow.png") no-repeat center center
+
+                    a
+                        color: #D2C2A6
+
+                a
+                    color: $main_light_color
+                    font-size: 16px
+                    text-transform: uppercase
+
+                    i
+                        margin-right: 15px
+
+    .get-connected
+        background-color: #281D11
+        margin-top: 90px
+
+        .connected-header
+            display: flex
+            justify-content: space-between
+            align-items: baseline 
+            border-bottom: 1px solid #CDC5B7
+            padding: 15px 30px
+
+            h3
+                color: $main_light_color
+                font-size: 17px
+                text-transform: uppercase
+                font-weight: bold 
+                margin-bottom: 0
+
+            ul.social-menu
+                list-style-type: none
+                display: flex
+                justify-content: space-between
+                margin-bottom: 0
+                li 
+                    margin-right: 14px
+                    margin-bottom: 0 
+                    &:last-child
+                        maring-right: 0
+                li a
+                    color: $main_light_color
+                    font-size: 20px
+        .details
+            padding: 30px
+            p
+                padding-left: 30px
+                font-size: 16px
+                line-height: 22px
+                color: $main_light_color
+                margin-bottom: 14px
+            p.email
+                background: url(http://sitesforchurch.s3.amazonaws.com/fa-send.png) no-repeat 0 3px 
+            p.address
+                background: url(http://sitesforchurch.s3.amazonaws.com/fa-envelope.png) no-repeat 0 3px
+            p.phone
+                background: url(http://sitesforchurch.s3.amazonaws.com/fa-phone.png) no-repeat 0 3px
+        .links
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center 
+            padding: 30px 
+            border-top: 1px solid #CDC5B7
+            a 
+                margin-bottom: 15px 
+                &:last-child
+                    margin-bottom: 0
+

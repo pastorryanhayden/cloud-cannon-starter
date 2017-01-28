@@ -1,0 +1,33 @@
+<div class="latestPost">
+    <h2>Latest Ministry Update</h2>
+    {% for post in site.posts limit: 1 %}
+    <div class="singlepost">
+    {% if  post.featured_image%}
+    <div class="featured_image">
+        <a href="{{post.url}}"><img src="{{post.featured_image}}" alt=""></a>
+    </div><!--/featured_image-->
+    {% else %}
+    <div class="featured_image">
+        <a href="{{post.url}}"><img src="{{site.data.main_blog_image}}" alt=""></a>
+    </div><!--/featured_image-->
+    {% endif %}
+    <div class="posttext">
+    <div class="title">
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <p class="author">
+        Written by {{post.author}} on <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
+      </p>
+     </div><!--/title-->
+      <div class="content">
+        {{ post.content | truncatewords: 60 }}
+      </div>
+      <div class="readbutton">
+      <a href="{{post.url}}" class="button">Read More</a>
+      </div><!--/readbutton-->
+        </div><!--/posttext-->
+      </div><!--/post-->
+    {% endfor %}
+    <div class="allposts">
+        <a href="{{site.url}}/updates" class="hollow button large">View All Updates</a>
+    </div>
+</div><!--/latestPost-->

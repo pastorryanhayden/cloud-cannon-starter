@@ -1,0 +1,19 @@
+---
+---
+<!-- site logo -->
+<a href="http://camprhino.org" style="display: block; height: 120px; margin-bottom: 25px; text-align: center; width: 100%; padding-bottom: 20px; border-bottom: 2px dashed {{site.data.design_settings.main_dark_color}};"><img src="{{site.data.settings.logo_image_path}}" height="115px"></a>
+<br>
+<h1 class="editable" style="text-align: center;">This is the headline</h1>
+<p class="editable" style="text-align: center;">This is the intro text</p>
+<hr style="margin-bottom: 50px;">
+{% for post in site.posts limit:6 %}
+<a href="{{post.url}}" style="text-align: center; display: block; width: 100%;"><img src="{{post.featured_image}}" alt="" style="border: 2px solid {{site.data.design_settings.main_dark_color}}; "></a>
+<h2 style="text-align: center;">{{post.title}}</h2>
+<p style="text-align: justify; max-width: 1000px; margin-left: auto; margin-right: auto;">{{post.content | truncatewords: 50 }}</p>
+<p style="text-align: center;"> <a href="{{post.url}}">Read more &raquo;</a></p>
+<hr>
+{% endfor %}
+
+<!-- advertising -->
+<p><a href="https://www.visionmissions.com/"><img src="{{site.data.settings.mission_board_image}}"></p></a>
+<p><a href="http://www.projectsouthafrica.com/"><img src="{{site.data.settings.project_south_africa_image}}"></p></a>

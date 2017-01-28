@@ -1,0 +1,73 @@
+---
+---
+<!doctype html>
+<html class="no-js" lang="en">
+  {% include head.html%}
+  <body class="post list">
+  <nav id="menu">
+      {% include menu.html %}
+  </nav>
+  <main id="panel">
+  <div class="header" style="background: url({{page.header_image}}) no-repeat top left; background-size: cover;">
+  {% include navigation.html %}
+
+  <p class="breadcrumbs"><a href="{{site.url}}">Home</a> <i class="fa fa-arrow-circle-right"></i> Updates </p><!--/breadcrumbs-->
+
+
+  </div><!--/header-->
+<div class="page-content">
+<div class="main-text">
+<div class="wrap">
+ <!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+<div class="singlepost">
+{% if  post.featured_image%}
+<div class="featured_image">
+    <a href="{{post.url}}"><img src="{{post.featured_image}}" alt=""></a>
+</div><!--/featured_image-->
+{% else %}
+<div class="featured_image">
+    <a href="{{post.url}}"><img src="{{site.data.main_blog_image}}" alt=""></a>
+</div><!--/featured_image-->
+{% endif %}
+<div class="posttext">
+<div class="title">
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <p class="author">
+    Written by {{post.author}} on <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
+  </p>
+ </div><!--/title-->
+  <div class="content">
+    {{ post.content | truncatewords: 30 }}
+  </div>
+  <div class="readbutton">
+  <a href="{{post.url}}" class="button">Read More</a>
+  </div><!--/readbutton-->
+    </div><!--/posttext-->
+  </div><!--/post-->
+{% endfor %}
+</div><!--/wrap-->
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
+
+</div><!--/main-text-->
+</div><!--/page-content-->
+{% include photos.html %}
+{% include newsletter.html %}
+
+      {% include footer.html%}
+  </main>
+  </body>
+</html>

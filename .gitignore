@@ -1,0 +1,6 @@
+_site
+_data/photos.json
+bower_components
+node_modules
+.sass-cache
+.jekyll-metadata

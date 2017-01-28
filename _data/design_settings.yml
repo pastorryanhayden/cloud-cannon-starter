@@ -1,0 +1,13 @@
+main_dark_color: '#3F2E1C'
+main_light_color: '#CDC5B7'
+main_bright_color: '#47B52C'
+secondary_bright_color: '#594323'
+main_font: "'Open Sans', sans-serif"
+main_font_import_code: "@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800');"
+secondary_font: 
+secondary_font_import_code: 
+_comments:
+  main_font: "i.e. 'Playfair Display', serif - IMPORTANT - leave off the 'font-family' and the trailing semi-colon!"
+  main_font_import_code: "i.e. @import url('https://fonts.googleapis.com/css?family=Playfair+Display'); - IMPORTANT - INCLUDE the trailing-semicolon!"
+  secondary_font: "i.e. 'Raleway', serif - IMPORTANT - leave off the 'font-family' and the trailing semi-colon!"
+  secondary_font_import_code: "i.e. @import url('https://fonts.googleapis.com/css?family=Raleway'); - IMPORTANT - INCLUDE the trailing-semicolon!"
